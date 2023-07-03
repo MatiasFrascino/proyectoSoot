@@ -1,0 +1,332 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  padding-right: 10px;
+  padding-left: 10px; }
+
+h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 12vw; }
+
+h2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: 5vw; }
+
+h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 4vw; }
+
+h5 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 6vw; }
+
+p {
+  font-family: "Poppins", sans-serif;
+  font-size: 3.5vw;
+  margin-bottom: 0; }
+
+a {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 4vw;
+  text-decoration: none;
+  color: black; }
+
+.imgCarrito {
+  height: 50px;
+  width: 50px; }
+
+.navegador {
+  height: 27vw; }
+  .navegador .navegador__lista {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+    align-items: start;
+    height: 100%;
+    width: 100%; }
+  .navegador__item {
+    margin-top: 12px; }
+  .navegador__dropdown {
+    text-align: center; }
+
+.indexBanner {
+  height: 50vw;
+  width: 100%; }
+
+.categoriesSection {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  height: 35vw; }
+  .categoriesSection__caja {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    height: 100%; }
+  .categoriesSection__item {
+    margin-left: 20px;
+    margin-right: 20px; }
+  .categoriesSection__img {
+    height: 60px;
+    width: 60px;
+    border-radius: 40px;
+    margin-bottom: 7px; }
+
+.bestSellerSection {
+  height: 100%; }
+  .bestSellerSection__caja {
+    display: grid;
+    grid-template-columns: 49% 49%;
+    grid-template-rows: 50% 50%;
+    column-gap: 10px;
+    row-gap: 10px;
+    justify-content: center;
+    align-items: center; }
+  .bestSellerSection__img {
+    height: 35vw;
+    width: 35vw;
+    border-radius: 10px;
+    align-self: center;
+    justify-self: center; }
+  .bestSellerSection__item {
+    text-align: center;
+    font-weight: 600;
+    font-size: 4.5vw; }
+
+#contenedorNav {
+  padding: 0; }
+
+.backButton {
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  top: 30.5px;
+  left: 30px; }
+  .backButton__img {
+    height: 32px;
+    width: 32px;
+    background-color: #0097B2;
+    border-radius: 10px; }
+
+.navegadorCategories {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: center;
+  align-items: center;
+  height: 100%;
+  width: 100%; }
+  .navegadorCategories__titulo {
+    font-weight: 600;
+    font-size: 6vw; }
+
+.categoriesBanners {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 180vw; }
+  .categoriesBanners__cocktails {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../sources/cocktail-section.jpeg);
+    background-size: 100%;
+    height: 33vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 25px;
+    border-radius: 10px; }
+  .categoriesBanners__wine {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../sources/wine-section.png);
+    background-size: 100%;
+    height: 33vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    padding-right: 25px;
+    border-radius: 10px; }
+  .categoriesBanners__beer {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../sources/beer-section.webp);
+    background-size: 100% 100%;
+    height: 33vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 25px;
+    border-radius: 10px; }
+  .categoriesBanners__softdrinks {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../sources/soft-drinks-section.jpeg);
+    background-size: 100%;
+    height: 33vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+    padding-right: 25px;
+    border-radius: 10px; }
+  .categoriesBanners__coffee {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../sources/coffee-section.jpeg);
+    background-size: 100%;
+    height: 33vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 25px;
+    border-radius: 10px; }
+  .categoriesBanners__titulo {
+    color: white;
+    font-size: 5vw;
+    font-weight: 400; }
+
+.imgCocktails {
+  height: 35vw;
+  width: 35vw;
+  border-radius: 20px;
+  border: 3px solid #0097B2; }
+
+.tarjetas {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+  justify-content: start; }
+  .tarjetas__cajas {
+    margin-bottom: 10px; }
+
+.mainSection {
+  display: flex;
+  flex-direction: row; }
+
+.infoDrink {
+  padding: 0;
+  width: 100%; }
+  .infoDrink__img {
+    width: 100%;
+    height: 100vw; }
+  .infoDrink__cajaPrincipal {
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 25px; }
+  .infoDrink__review {
+    display: flex;
+    flex-direction: row;
+    width: 40vw;
+    justify-content: space-between;
+    height: 10vw;
+    margin-bottom: 8px;
+    align-items: center; }
+  .infoDrink__star {
+    width: 20px;
+    height: 20px; }
+  .infoDrink__likes {
+    position: absolute;
+    top: 405px;
+    left: 310px;
+    text-align: center; }
+  .infoDrink__heart {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px; }
+  .infoDrink__button {
+    background-color: #F5F5F5;
+    border-radius: 5px;
+    height: 10vw;
+    width: 40vw;
+    border: none;
+    font-size: 3vw; }
+    .infoDrink__button--active, .infoDrink__checkout {
+      background-color: #0097B2;
+      border-radius: 5px;
+      height: 10vw;
+      width: 40vw;
+      border: none;
+      font-size: 3vw;
+      color: white; }
+    .infoDrink__button__grid {
+      display: grid;
+      grid-template-columns: 49% 49%;
+      grid-template-rows: 49% 49%;
+      width: 100vw;
+      padding-left: 25px;
+      height: 22vw; }
+  .infoDrink__checkout {
+    display: flex;
+    width: 90%;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 10px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center; }
+    .infoDrink__checkout__order {
+      margin: 0; }
+
+.checkout {
+  display: flex;
+  flex-direction: column; }
+  .checkout__tarjeta {
+    display: flex;
+    flex-direction: row;
+    width: 75%;
+    justify-content: space-between;
+    margin-bottom: 15px; }
+  .checkout__caja {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly; }
+  .checkout__cantidad {
+    display: flex;
+    flex-direction: row;
+    width: 30vw;
+    justify-content: space-between; }
+    .checkout__cantidad--boton {
+      border-radius: 20px;
+      height: 5vw;
+      width: 5vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #0098b3;
+      color: white;
+      border: none; }
+
+.botonCheckout {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  height: 13vw;
+  position: fixed;
+  top: 190vw;
+  left: 10vw;
+  margin: 0;
+  background-color: #0098b3;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px; }
+  .botonCheckout__caja {
+    display: flex;
+    flex-direction: row;
+    width: 40vw;
+    justify-content: space-between;
+    border-right: 1px solid white;
+    padding-right: 40px; }
+  .botonCheckout__titulo {
+    margin: 0;
+    font-size: 5vw; }
+.ocultar{
+  display: none;
+}
