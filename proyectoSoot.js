@@ -55,7 +55,7 @@ class Carrito{
         // Este algoritmo solo se ejecuta si nos encontramos en la página checkout.html
         // Es recomendable usar Live Server (Go live) para correr la aplicación por el tema de los directorios
         //Se agrego /proyectoSoot/ ya que se ha creado el repositorio
-        if (path == "/proyectoSoot/checkout.html"){
+        if (path == "/checkout.html"){
             console.log("Estoy en el checkout"); 
             this.obtenerDeLocalStorage();
             //Se crea una variable self ya que la variable this trae conflictos dentro del evento unload (Fuente chatGPT)
@@ -68,26 +68,25 @@ class Carrito{
                         self.guardarEnLocalStorage();
                     }
                 })
-                // Código a ejecutar cuando la página se recargue
-                console.log('La página se está recargando');
-                // Ejecuta aquí el código adicional que deseas realizar después de la recarga
               });
               
             this.contador();
             this.productos.forEach((producto, indice) => {
-                cajaCheckoutCarrito.innerHTML += `
-                <div class="checkout__tarjeta" id="tarjeta${indice}">
-                    <img class="imgCocktails" src="${producto.imagen}" alt="">
-                    <div class="checkout__caja">
-                        <p>${producto.nombre} </p>
-                        <p>$${producto.precio}</p>
-                        <div class="checkout__cantidad">
-                            <button class="checkout__cantidad--boton menosCantidad">-</button>
-                            <p class="cantidad">${producto.cantidad}</p>
-                            <button class="checkout__cantidad--boton masCantidad">+</button>
+                if (producto != ""){
+                    cajaCheckoutCarrito.innerHTML += `
+                    <div class="checkout__tarjeta" id="tarjeta${indice}">
+                        <img class="imgCocktails" src="${producto.imagen}" alt="">
+                        <div class="checkout__caja">
+                            <p>${producto.nombre} </p>
+                            <p>$${producto.precio}</p>
+                            <div class="checkout__cantidad">
+                                <button class="checkout__cantidad--boton menosCantidad">-</button>
+                                <p class="cantidad">${producto.cantidad}</p>
+                                <button class="checkout__cantidad--boton masCantidad">+</button>
+                            </div>
                         </div>
-                    </div>
-                </div>`
+                    </div>`
+                }
             });
             const cantidad = document.querySelectorAll(".cantidad")
             //Creamos el elemento menos cantidad
@@ -332,6 +331,11 @@ ahora se ejecuta correctamente
 
 Actualizaciones = 
 Se implemento el uso del repositorio GIT para poder seguir con los cambios de una manera mas organizada
+
+03/07/2023
+Soluciones a Bugs =
+- Se arreglo el problema de la recarga de la pagina del checkout que mostraba productos indefinidos ya que la funcion no borraba
+todos los productos que eran string vacios al recargar la pagina
 
 
 
