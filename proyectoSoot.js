@@ -78,11 +78,11 @@ class Carrito{
                         <img class="imgCocktails" src="${producto.imagen}" alt="">
                         <div class="checkout__caja">
                             <p>${producto.nombre} </p>
-                            <p>$${producto.precio}</p>
+                            <p>€${producto.precio}</p>
                             <div class="checkout__cantidad">
-                                <button class="checkout__cantidad--boton menosCantidad">-</button>
+                                <button class="checkout__cantidad--boton menosCantidad"><p>-</p></button>
                                 <p class="cantidad">${producto.cantidad}</p>
-                                <button class="checkout__cantidad--boton masCantidad">+</button>
+                                <button class="checkout__cantidad--boton masCantidad"><p>+</p></button>
                             </div>
                         </div>
                     </div>`
@@ -173,6 +173,7 @@ class Carrito{
                     // Se aplica una clase para ocultar el div y de esa manera, no perder el orden de los indices de los div
                     const tarjetaProducto = document.getElementById(`tarjeta${indiceProducto}`)
                     tarjetaProducto.innerHTML = " ";
+                    tarjetaProducto.className = "ocultar";
                 }
                 //Guardo el array actualizado en el storage
                 this.guardarEnLocalStorage();
@@ -206,7 +207,7 @@ class Carrito{
             return acumulador;
             
         }, 0);
-        botonCompra.innerText = "$" + this.total;
+        botonCompra.innerText = "€" + this.total;
         console.log(this.productos);
     }
 }
@@ -226,15 +227,15 @@ function Producto(nombre, precio, cantidad, imagen, id){
 }
 
 // Productos
-let gaiaMa = new Producto("Gaia Ma", 25, 1, "sources/gaiaMa.jpg", 0);
-let martini = new Producto("Martini", 22, 1, "sources/martini.jpeg", 1);
-let aperolSpritz = new Producto("Aperol Spritz", 25, 1, "sources/aperol-spritz.jpeg", 3);
-let cubaLibre = new Producto("Cuba Libre", 25, 1, "sources/cuba-libre.jpeg", 4);
-let ginTonic = new Producto("Gin & Tonic", 25, 1, "sources/gin-tonic.jpeg", 5);
-let mojito = new Producto("Mojito", 25, 1, "sources/mojito.jpeg", 6);
-let hugo = new Producto("Hugo", 25, 1, "sources/hugo.jpeg", 7);
-let smokyPaloma = new Producto("Smoky Paloma", 25, 1, "sources/smokyPaloma.jpeg", 8);
-let margarita = new Producto("Margarita", 25, 1, "sources/margarita.png", 9);
+let gaiaMa = new Producto("Gaia Ma", 12, 1, "sources/gaiaMa.jpg", 0);
+let martini = new Producto("Martini", 16, 1, "sources/martini.jpeg", 1);
+let aperolSpritz = new Producto("Aperol Spritz", 7, 1, "sources/aperol-spritz.jpeg", 3);
+let cubaLibre = new Producto("Cuba Libre", 10, 1, "sources/cuba-libre.jpeg", 4);
+let ginTonic = new Producto("Gin & Tonic", 10, 1, "sources/gin-tonic.jpeg", 5);
+let mojito = new Producto("Mojito", 9, 1, "sources/mojito.jpeg", 6);
+let hugo = new Producto("Hugo", 8, 1, "sources/hugo.jpeg", 7);
+let smokyPaloma = new Producto("Smoky Paloma", 12, 1, "sources/smokyPaloma.jpeg", 8);
+let margarita = new Producto("Margarita", 11, 1, "sources/margarita.png", 9);
 
 // Elementos
 const botonGaiaMa = document.querySelector("#gaiaMa");
@@ -248,6 +249,7 @@ const botonMojito = document.querySelector("#mojito");
 const btnHugo = document.querySelector("#hugo");
 const btnSmokyPaloma = document.querySelector("#smokyPaloma");
 const btnMargarita = document.querySelector("#margarita");
+const btnTarjetaCocktails = document.querySelectorAll(".infoDrink__button")
 
 
 
@@ -297,6 +299,18 @@ if (btnMargarita){ // Le pongo un condicional porque si estoy en otra página es
         carrito.agregar(margarita);
     });
 }
+if (btnTarjetaCocktails) {
+    for (const btn of btnTarjetaCocktails) {
+      btn.addEventListener("click", () => {
+        if (btn.className === "infoDrink__button") {
+          btn.className = "infoDrink__button--active";
+        } else {
+          btn.className = "infoDrink__button";
+        }
+      });
+    }
+}
+  
 
 
 
@@ -310,7 +324,7 @@ if (btnMargarita){ // Le pongo un condicional porque si estoy en otra página es
 // Creo el objeto carrito. Es conveniente crearlo a lo último, cosa que ya estén todos
 // los elementos inicializados, variables globales declaradas, y todo listo para usar
 const carrito = new Carrito();
-console.log(carrito.productos)
+console.log(...carrito.productos)
 
 //Bugs solucionados:
 /*
