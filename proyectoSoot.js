@@ -3,6 +3,7 @@ class Carrito{
     constructor(){
         this.obtenerDeLocalStorage();
         this.total = 0;
+        this.productos;
         // Llamo a listar y al contador apenas inicia la aplicación
         this.listar();
         
@@ -249,7 +250,8 @@ const botonMojito = document.querySelector("#mojito");
 const btnHugo = document.querySelector("#hugo");
 const btnSmokyPaloma = document.querySelector("#smokyPaloma");
 const btnMargarita = document.querySelector("#margarita");
-const btnTarjetaCocktails = document.querySelectorAll(".infoDrink__button")
+const btnTarjetaCocktails = document.querySelectorAll(".infoDrink__button");
+const contador = document.querySelectorAll(".contador");
 
 
 
@@ -325,12 +327,35 @@ if (btnTarjetaCocktails) {
 // los elementos inicializados, variables globales declaradas, y todo listo para usar
 const carrito = new Carrito();
 console.log(...carrito.productos)
+//Contador de cantidades encima de la imagen carrito
+if(contador){
+    //Recorremos el array guarando cada imagen en la variable punto
+    for (let punto of contador){
+        //Si el carrito no esta vacio 
+        if(carrito.productos != ""){
+            //Aplicamos la clase
+            punto.className = "contador--active"
+            const totalCantidad = carrito.productos.reduce((acumulador, producto) => {
+                //sumamos las cantidades de todos los productos con reduce
+                if(producto != ''){
+                    // El return se utiliza para devolver el valor actualizado de la variable acumulador luego que se cumpla la condicion if
+                    // esto evita que se sumen elementos vacios
+                    return acumulador + producto.cantidad
+                }
+                //Else implicito, se devuelve solamente acumulador sin sumarse las cantidades del elemento vacio
+                return acumulador;
+
+            }, 0);
+            //Actualizamos la cantidad en vivo y en directo
+            punto.innerText = totalCantidad;
+        }
+    }
+}
+
 
 //Bugs solucionados:
 /*
-30/06/2023 : 
-
-Soluciones a Bugs =
+First and Second Version
 - Se arreglo el problema de los indices de los productos, botones y divs que se 
 modificaban al eliminar un producto del carrito. Ahora todo se muestra correctamente
 ya que se agrega un elemento vacio al eliminar el producto para asi conservar los 
@@ -343,16 +368,17 @@ los productos, botones y divs y de esta manera, continuan vinculados
 - Se corrigio el problema del contador que me sumaba objetos vacios al acumulador y me tiraba NaN,
 ahora se ejecuta correctamente
 
-Actualizaciones = 
-Se implemento el uso del repositorio GIT para poder seguir con los cambios de una manera mas organizada
+-Se implemento el uso del repositorio GIT para poder seguir con los cambios de una manera mas organizada
 
-03/07/2023
-Soluciones a Bugs =
 - Se arreglo el problema de la recarga de la pagina del checkout que mostraba productos indefinidos ya que la funcion no borraba
 todos los productos que eran string vacios al recargar la pagina
 
+Cuarta Version (Not on Commit yet)
+- Ruta para el repo /Users/matiasfrascino/Documents/CoderHouse/JavaScript/proyectoSoot
 
+- Se agrego el contador de cantidad de productos por encima de la imagen carrito para hacerlo de manera dinamica
 
+- Se modificaron los estilos para que la aplicacion sea responsive en las distintas pantallas
 
 
 

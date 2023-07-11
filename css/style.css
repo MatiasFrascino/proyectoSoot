@@ -44,6 +44,9 @@ a {
   text-decoration: none;
   color: black; }
 
+.interlineado {
+  line-height: 0.8; }
+
 .imgCarrito {
   height: 14vw;
   width: 14vw; }
@@ -59,9 +62,28 @@ a {
     height: 100%;
     width: 100%; }
   .navegador__item {
-    margin-top: 12px; }
+    margin-top: 3vw;
+    margin: 0; }
   .navegador__dropdown {
     text-align: center; }
+
+.contador {
+  display: none; }
+  .contador--active {
+    background-color: #0097B2;
+    height: 4vw;
+    width: 4vw;
+    position: absolute;
+    border-radius: 10vw;
+    top: 6vw;
+    right: 6vw;
+    color: white;
+    text-align: center;
+    font-size: 2.4vw; }
+
+.navbar {
+  padding: 0;
+  margin: 0; }
 
 .navbar-toggler {
   width: 15vw;
@@ -129,7 +151,7 @@ a {
   background-color: transparent; }
   .backButton__img {
     height: 10vw;
-    width: 10VWpx;
+    width: 10vw;
     background-color: #0097B2;
     border-radius: 10px; }
 
@@ -359,3 +381,304 @@ a {
 
 .ocultar {
   display: none; }
+
+@media only screen and (min-width: 768px) {
+  h1 {
+    font-size: 8vw; }
+  h2 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-size: 3vw; }
+  h3 {
+    font-size: 3vw; }
+  h4 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 2.5vw;
+    margin-bottom: 0; }
+  h5 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 4vw; }
+  p {
+    font-size: 2.5vw;
+    margin-bottom: 0; }
+  a {
+    font-size: 2vw; }
+  .navegador {
+    height: 22vw; }
+  .imgCarrito {
+    height: 10vw;
+    width: 10vw; }
+  .contador {
+    display: none; }
+    .contador--active {
+      background-color: #0097B2;
+      height: 3vw;
+      width: 3vw;
+      top: 5vw;
+      right: 8vw;
+      font-size: 2vw; }
+  .navbar {
+    padding: 0;
+    margin: 0; }
+  .navbar-toggler {
+    width: 10vw;
+    height: 8vw;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .navbar-toggler-icon {
+      height: 5vw;
+      width: 5vw; }
+  .indexBanner {
+    height: 50vw;
+    width: 100%; }
+  .categoriesSection {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3.03vw;
+    height: 27vw;
+    width: 100%; }
+    .categoriesSection__caja {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      text-align: center;
+      height: 100%;
+      flex-wrap: nowrap; }
+    .categoriesSection__item {
+      margin-left: 10vw;
+      margin-right: 10vw; }
+    .categoriesSection__img {
+      height: 12.5vw;
+      width: 13vw;
+      border-radius: 10vw;
+      margin-bottom: 7px; }
+  .bestSellerSection {
+    height: 100%; }
+    .bestSellerSection__caja {
+      display: grid;
+      grid-template-columns: 49% 49%;
+      grid-template-rows: 50% 50%;
+      column-gap: 10px;
+      row-gap: 10px; }
+    .bestSellerSection__img {
+      height: 25vw;
+      width: 25vw;
+      border-radius: 10px;
+      align-self: center;
+      justify-self: center;
+      text-align: center; }
+  #contenedorNav {
+    padding: 0; }
+  .backButton {
+    border: none;
+    background-color: transparent; }
+    .backButton__img {
+      height: 7vw;
+      width: 7vw;
+      background-color: #0097B2;
+      border-radius: 10px; }
+  .navegadorCategories {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+    height: 100%;
+    width: 100%; }
+    .navegadorCategories__titulo {
+      font-weight: 600;
+      font-size: 4.5vw;
+      margin: 0; }
+    .navegadorCategories__item {
+      margin: 0;
+      width: 15vw; }
+  .categoriesBanners {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 180vw; }
+    .categoriesBanners__cocktails {
+      height: 33vw;
+      width: 90vw; }
+    .categoriesBanners__wine {
+      height: 33vw;
+      width: 90vw; }
+    .categoriesBanners__beer {
+      height: 33vw;
+      width: 90vw; }
+    .categoriesBanners__softdrinks {
+      height: 33vw;
+      width: 90vw; }
+    .categoriesBanners__coffee {
+      height: 33vw;
+      width: 90vw; }
+    .categoriesBanners__titulo {
+      color: white;
+      font-size: 3.5vw;
+      font-weight: 400; }
+  .imgCocktails {
+    height: 20vw;
+    width: 20vw;
+    border-radius: 20px;
+    border: 3px solid #0097B2; }
+  .tarjetas {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    padding-right: 2vw;
+    padding-left: 2vw; }
+    .tarjetas__cajas {
+      margin-bottom: 10px;
+      height: 30vw; }
+  .backButtonPosAbs {
+    position: absolute;
+    top: 8vw;
+    left: 10vw; }
+  .infoDrink {
+    padding: 0;
+    width: 100%; }
+    .infoDrink__img {
+      width: 20vw;
+      height: 20vw;
+      position: absolute;
+      left: 70vw;
+      border-radius: 15vw;
+      top: 15vw; }
+    .infoDrink__cajaPrincipal {
+      padding-left: 9vw;
+      padding-right: 7vw;
+      padding-top: 20vw; }
+    .infoDrink__review {
+      display: flex;
+      flex-direction: row;
+      width: 30vw;
+      justify-content: space-between;
+      height: 10vw;
+      margin-bottom: 1vw;
+      align-items: center; }
+    .infoDrink__star {
+      width: 3vw;
+      height: 3vw; }
+    .infoDrink__likes {
+      position: absolute;
+      top: 108vw;
+      left: 82vw;
+      text-align: center;
+      display: none; }
+    .infoDrink__heart {
+      width: 10vw;
+      height: 10vw;
+      margin-bottom: 10px;
+      display: none; }
+    .infoDrink__button {
+      background-color: #F5F5F5;
+      border-radius: 5px;
+      height: 10vw;
+      width: 40vw;
+      border: none;
+      font-size: 3vw; }
+      .infoDrink__button--active, .infoDrink__checkout {
+        background-color: #0097B2;
+        border-radius: 5px;
+        height: 10vw;
+        width: 40vw;
+        border: none;
+        font-size: 3vw;
+        color: white; }
+      .infoDrink__button__grid {
+        display: grid;
+        grid-template-columns: 49% 49%;
+        grid-template-rows: 49% 49%;
+        width: 100vw;
+        padding-left: 7vw;
+        padding-top: 3vw;
+        height: 24vw; }
+    .infoDrink__checkout {
+      display: flex;
+      width: 90%;
+      margin-left: 5vw;
+      margin-right: 7vw;
+      margin-top: 3vw;
+      margin-bottom: 5vw;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding-left: 15px;
+      padding-right: 15px;
+      text-align: center; }
+      .infoDrink__checkout__order {
+        margin: 0; }
+  .checkout {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30vw; }
+    .checkout__tarjeta {
+      display: flex;
+      flex-direction: row;
+      width: 75%;
+      justify-content: space-around;
+      margin-bottom: 3vw;
+      margin-left: 2vw; }
+    .checkout__caja {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly; }
+    .checkout__cantidad {
+      display: flex;
+      flex-direction: row;
+      width: 25vw;
+      justify-content: space-between;
+      padding-top: 2.5vw; }
+      .checkout__cantidad--boton {
+        border-radius: 20px;
+        height: 3vw;
+        width: 3vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background-color: #0098b3;
+        color: white;
+        border: none; }
+  .botonCheckout {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 70vw;
+    height: 8vw;
+    position: relative;
+    top: 30vw;
+    left: 14vw;
+    margin-bottom: 20vw;
+    background-color: #0098b3;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px; }
+    .botonCheckout__caja {
+      display: flex;
+      flex-direction: row;
+      width: 40vw;
+      justify-content: space-between;
+      align-items: center;
+      border-right: 1px solid white;
+      padding-right: 10vw;
+      padding-left: 10vw; }
+    .botonCheckout__titulo {
+      margin: 0;
+      font-size: 3vw; }
+  .ocultar {
+    display: none; } }
+
+@media only screen and (min-width: 1200px) {
+  .offcanvas.offcanvas-start {
+    width: 1000px; } }
