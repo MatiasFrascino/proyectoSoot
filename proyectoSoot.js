@@ -56,7 +56,7 @@ class Carrito{
         // Este algoritmo solo se ejecuta si nos encontramos en la página checkout.html
         // Es recomendable usar Live Server (Go live) para correr la aplicación por el tema de los directorios
         //Se agrego /proyectoSoot/ ya que se ha creado el repositorio
-        if (path == "/checkout.html"){
+        if (path == "/proyectoSoot/checkout.html"){
             console.log("Estoy en el checkout"); 
             this.obtenerDeLocalStorage();
             //Se crea una variable self ya que la variable this trae conflictos dentro del evento unload (Fuente chatGPT)
