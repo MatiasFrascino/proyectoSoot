@@ -236,10 +236,14 @@ a {
 
 .tarjetas {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 6vw;
+  margin-right: 6vw;
+  align-items: center;
+  flex-wrap: wrap;
   text-align: center;
-  width: 100%;
-  justify-content: start; }
+  width: 150vw; }
   .tarjetas__cajas {
     margin-bottom: 10px; }
 
@@ -374,8 +378,9 @@ a {
     width: 40vw;
     justify-content: space-between;
     border-right: 1px solid white;
-    padding-right: 40px; }
+    padding-right: 10vw; }
   .botonCheckout__titulo {
+    padding-left: 5vw;
     margin: 0;
     font-size: 5vw; }
 
@@ -532,13 +537,15 @@ a {
     flex-wrap: wrap;
     text-align: center;
     width: 100%;
+    margin-left: 18vw;
+    margin-right: 10vw;
     height: 100%;
-    justify-content: space-between;
-    padding-right: 2vw;
-    padding-left: 2vw; }
+    justify-content: start;
+    align-items: center; }
     .tarjetas__cajas {
       margin-bottom: 10px;
-      height: 30vw; }
+      height: auto;
+      margin-right: 2vw; }
   .backButtonPosAbs {
     position: absolute;
     top: 8vw;
@@ -674,6 +681,7 @@ a {
       padding-right: 10vw;
       padding-left: 10vw; }
     .botonCheckout__titulo {
+      padding-right: 3vw;
       margin: 0;
       font-size: 3vw; }
   .ocultar {
@@ -681,4 +689,319 @@ a {
 
 @media only screen and (min-width: 1200px) {
   .offcanvas.offcanvas-start {
-    width: 1000px; } }
+    width: 1000px; }
+  h1 {
+    font-size: 4vw; }
+  h2 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-size: 3vw; }
+  h3 {
+    font-size: 1.7vw; }
+  h4 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 1.2vw;
+    margin-bottom: 0; }
+  h5 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 2vw; }
+  p {
+    font-size: 1.3vw;
+    margin-bottom: 0; }
+  a {
+    font-size: 1.3vw; }
+  .navegador {
+    height: 12vw; }
+  .imgCarrito {
+    height: 4vw;
+    width: 4vw; }
+  .contador {
+    display: none; }
+    .contador--active {
+      background-color: #0097B2;
+      height: 1.5vw;
+      width: 1.5vw;
+      top: 3vw;
+      right: 13.6vw;
+      font-size: 1vw; }
+  .navbar {
+    padding: 0;
+    margin: 0; }
+  .navbar-toggler {
+    width: 3.3vw;
+    height: 3vw;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .navbar-toggler-icon {
+      height: 3vw;
+      width: 3vw; }
+  .indexBanner {
+    height: 25vw;
+    width: 50vw;
+    opacity: 1;
+    border-radius: 50vw; }
+    .indexBanner__contenedor {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      background-color: antiquewhite; }
+  .categoriesSection {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3.03vw;
+    height: 17vw;
+    width: 100%; }
+    .categoriesSection__caja {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      text-align: center;
+      height: 100%;
+      flex-wrap: nowrap; }
+    .categoriesSection__item {
+      margin-left: 10vw;
+      margin-right: 10vw; }
+    .categoriesSection__img {
+      height: 8.9vw;
+      width: 9.5vw;
+      border-radius: 12vw;
+      margin-bottom: 7px; }
+  .bestSellerSection {
+    height: 100%;
+    margin-bottom: 10vw; }
+    .bestSellerSection__caja {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      margin-bottom: 5vw; }
+    .bestSellerSection__img {
+      height: 12vw;
+      width: 12vw;
+      border-radius: 10px;
+      align-self: center;
+      justify-self: center;
+      text-align: center; }
+      .bestSellerSection__img:hover {
+        transform: scale(2); }
+  #contenedorNav {
+    padding: 0; }
+  .backButton {
+    border: none;
+    background-color: transparent; }
+    .backButton__img {
+      height: 4vw;
+      width: 4vw;
+      background-color: #0097B2;
+      border-radius: 10px; }
+  .navegadorCategories {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+    height: 100%;
+    width: 100%; }
+    .navegadorCategories__titulo {
+      font-weight: 600;
+      font-size: 3vw;
+      margin: 0; }
+    .navegadorCategories__item {
+      margin: 0;
+      width: 15vw; }
+  .categoriesBanners {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly start;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 80vw; }
+    .categoriesBanners__cocktails {
+      height: 20vw;
+      width: 45vw; }
+    .categoriesBanners__wine {
+      height: 20vw;
+      width: 45vw; }
+    .categoriesBanners__beer {
+      height: 20vw;
+      width: 45vw; }
+    .categoriesBanners__softdrinks {
+      height: 20vw;
+      width: 45vw; }
+    .categoriesBanners__coffee {
+      height: 20vw;
+      width: 45vw; }
+    .categoriesBanners__titulo {
+      color: white;
+      font-size: 2vw;
+      font-weight: 400; }
+  .imgCocktails {
+    height: 20vw;
+    width: 20vw;
+    border-radius: 20px;
+    border: 3px solid #0097B2; }
+  .tarjetas {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+    width: 100%;
+    margin-left: 18vw;
+    margin-right: 10vw;
+    height: 100%;
+    justify-content: start;
+    align-items: center; }
+    .tarjetas__cajas {
+      margin-bottom: 10px;
+      height: auto;
+      margin-right: 2vw; }
+  .backButtonPosAbs {
+    position: absolute;
+    top: 4vw;
+    left: 10vw; }
+  .infoDrink {
+    padding: 0;
+    width: 100%; }
+    .infoDrink__img {
+      width: 20vw;
+      height: 20vw;
+      position: absolute;
+      left: 65vw;
+      border-radius: 15vw;
+      top: 10vw; }
+    .infoDrink__cajaPrincipal {
+      padding-left: 9vw;
+      padding-right: 7vw;
+      padding-top: 15vw; }
+    .infoDrink__review {
+      display: flex;
+      flex-direction: row;
+      width: 20vw;
+      justify-content: space-between;
+      height: 7vw;
+      margin-bottom: 1vw;
+      align-items: center; }
+    .infoDrink__star {
+      width: 2vw;
+      height: 2vw; }
+    .infoDrink__likes {
+      position: absolute;
+      top: 108vw;
+      left: 82vw;
+      text-align: center;
+      display: none; }
+    .infoDrink__heart {
+      width: 10vw;
+      height: 10vw;
+      margin-bottom: 10px;
+      display: none; }
+    .infoDrink__button {
+      background-color: #F5F5F5;
+      border-radius: 5vw;
+      height: 5vw;
+      width: 20vw;
+      border: none;
+      font-size: 1vw; }
+      .infoDrink__button--active, .infoDrink__checkout {
+        background-color: #0097B2;
+        border-radius: 5px;
+        height: 5vw;
+        width: 20vw;
+        border: none;
+        font-size: 1vw;
+        color: white; }
+      .infoDrink__button__grid {
+        display: grid;
+        grid-template-columns: 49% 49%;
+        grid-template-rows: 49% 49%;
+        align-items: center;
+        justify-items: center;
+        width: 100vw;
+        padding-left: 7vw;
+        padding-top: 1vw;
+        height: 12vw; }
+    .infoDrink__checkout {
+      display: flex;
+      width: 40vw;
+      height: 7vw;
+      margin-left: 30vw;
+      margin-right: 7vw;
+      margin-top: 3vw;
+      margin-bottom: 5vw;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding-left: 15px;
+      padding-right: 15px;
+      text-align: center;
+      border-radius: 10vw; }
+      .infoDrink__checkout__order {
+        margin: 0; }
+  .checkout {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 30vw; }
+    .checkout__tarjeta {
+      display: flex;
+      flex-direction: row;
+      width: 60%;
+      justify-content: space-evenly;
+      margin-bottom: 3vw;
+      margin-left: 10vw; }
+    .checkout__caja {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly; }
+    .checkout__cantidad {
+      display: flex;
+      flex-direction: row;
+      width: 25vw;
+      justify-content: space-between;
+      padding-top: 2.5vw; }
+      .checkout__cantidad--boton {
+        border-radius: 20px;
+        height: 3vw;
+        width: 3vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background-color: #0098b3;
+        color: white;
+        border: none; }
+  .botonCheckout {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 50vw;
+    height: 8vw;
+    position: relative;
+    top: 30vw;
+    left: 23vw;
+    margin-bottom: 20vw;
+    background-color: #0098b3;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px; }
+    .botonCheckout__caja {
+      display: flex;
+      flex-direction: row;
+      width: 40vw;
+      justify-content: space-between;
+      align-items: center;
+      border-right: 1px solid white;
+      padding-right: 5vw;
+      padding-left: 5vw; }
+    .botonCheckout__titulo {
+      padding-right: 3vw;
+      margin: 0;
+      font-size: 2vw; }
+  .ocultar {
+    display: none; } }

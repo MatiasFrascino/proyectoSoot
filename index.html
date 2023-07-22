@@ -36,10 +36,10 @@
                   </a>
                   <ul class="dropdown-menu">
                     <li><a class="dropdown-item navegador__dropdown" href="cocktails.html">Cocktails</a></li>
-                    <li><a class="dropdown-item navegador__dropdown" href="#">Wine</a></li>
-                    <li><a class="dropdown-item navegador__dropdown" href="#">Beer</a></li>
-                    <li><a class="dropdown-item navegador__dropdown" href="#">Soft Drinks</a></li>
-                    <li><a class="dropdown-item navegador__dropdown" href="#">Coffee</a></li>
+                    <li><a class="dropdown-item navegador__dropdown" href="wine.html">Wine</a></li>
+                    <li><a class="dropdown-item navegador__dropdown" href="beer.html">Beer</a></li>
+                    <li><a class="dropdown-item navegador__dropdown" href="soft.html">Soft Drinks</a></li>
+                    <li><a class="dropdown-item navegador__dropdown" href="coffee.html">Coffee</a></li>
                     <li>
                       <hr class="dropdown-divider">
                     </li>
@@ -64,7 +64,9 @@
 
   <!-- COMIENZA EL MAIN -->
   <main>
-      <img class="indexBanner" src="sources/sootBanner1.jpeg" alt="Carousel">
+      <div class="indexBanner__contenedor">
+        <img class="indexBanner" src="sources/sootBanner1.jpeg" alt="Carousel">
+      </div>
       <section class="categoriesSection">
           <div class="categoriesSection__caja">
               <h3>Categories</h3>
@@ -76,17 +78,17 @@
                   <p>Cocktails</p>
               </div>
               <div class="categoriesSection__item">
-                  <img class="categoriesSection__img" src="sources/wineCategoryIndex.jpeg" alt="imgWine">
+                  <a href="wine.html"><img class="categoriesSection__img" src="sources/wineCategoryIndex.jpeg" alt="imgWine"></a>
                   <p>Wine</p>
               </div>
               <div class="categoriesSection__item">
-                  <img class="categoriesSection__img" src="sources/coffeeCategoryIndex.jpeg" alt="imgCoffee">
+                  <a href="coffee.html"><img class="categoriesSection__img" src="sources/coffeeCategoryIndex.jpeg" alt="imgCoffee"></a>
                   <p>Coffee</p>
               </div>
           </div>
       </section>
       <section class="bestSellerSection">
-          <h3>Best Sellers</h3>
+          <h3 class="bestSellerSection__caja">Best Sellers</h3>
           <div class="bestSellerSection__caja">
               <div class="bestSellerSection__item">
                 <a href="cocktails/gaiaMa.html"><img class="bestSellerSection__img" src="sources/gaiaMa.jpg" alt="Gaia Ma"></a>
@@ -97,11 +99,11 @@
                 <p>Smoky Paloma</p>
               </div class="bestSellerSection__item">
               <div class="bestSellerSection__item">
-                <img class="bestSellerSection__img" src="sources/coffeeCategoryIndex.jpeg" alt="">
+                <a href="coffee/capuccino.html"><img class="bestSellerSection__img" src="sources/coffeeCategoryIndex.jpeg" alt=""></a>
                 <p>Capuccino</p>
               </div>
               <div class="bestSellerSection__item">
-                <img class="bestSellerSection__img" src="sources/suavignonBlanc.jpeg" alt="">
+                <a href="wine/suavignonBlanc.html"><img class="bestSellerSection__img" src="sources/suavignonBlanc.jpeg" alt=""></a>
                 <p>Suavignon Blanc</p>
               </div>
             </div>

@@ -1,0 +1,246 @@
+[
+    {
+        "nombre": "Gaia Ma",
+        "precio": 12,
+        "cantidad": 1,
+        "imagen": "/proyectoSoot/sources/gaiaMa.jpg",
+        "id": 0
+    },
+    {
+        "nombre": "Martini",
+        "precio": 16,
+        "cantidad": 1,
+        "imagen": "/proyectoSoot/sources/martini.jpeg",
+        "id": 1
+    },
+    {
+        "nombre": "Aperol Spritz",
+        "precio": 7,
+        "cantidad": 1,
+        "imagen": "/proyectoSoot/sources/aperol-spritz.jpeg",
+        "id": 2
+    },
+    {
+        "nombre": "Cuba Libre",
+        "precio": 10,
+        "cantidad": 1,
+        "imagen": "/proyectoSoot/sources/cuba-libre.jpeg",
+        "id": 3
+    },
+    {
+        "nombre": "Gin & Tonic",
+        "precio": 10,
+        "cantidad": 1,
+        "imagen": "/proyectoSoot/sources/gin-tonic.jpeg",
+        "id": 4
+    },
+    {
+        "nombre": "Mojito",
+        "precio": 9,
+        "cantidad": 1,
+        "imagen": "/proyectoSoot/sources/mojito.jpeg",
+        "id": 5
+    },
+    {
+        "nombre": "Hugo",
+        "precio": 8,
+        "cantidad": 1,
+        "imagen": "/proyectoSoot/sources/hugo.jpeg",
+        "id": 6
+    },
+    {
+        "nombre": "Smoky Paloma",
+        "precio": 12,
+        "cantidad": 1,
+        "imagen": "/proyectoSoot/sources/smokyPaloma.jpeg",
+        "id": 7
+    },
+    {
+        "nombre": "Margarita",
+        "precio": 11,
+        "cantidad": 1,
+        "imagen": "/proyectoSoot/sources/margarita.png",
+        "id": 8
+    },
+    {
+        "nombre": "Capuccino",
+        "precio": 3,
+        "cantidad": 1,
+        "imagen": "/proyectoSoot/sources/capuccino.jpeg",
+        "id": 9
+    },
+    {
+        "nombre": "Flat White",
+        "precio": 4,
+        "cantidad": 1,
+        "imagen": "/proyectoSoot/sources/flatWhite.png",
+        "id": 10
+    },
+    {
+        "nombre": "Espresso",
+        "precio": 2,
+        "cantidad": 1,
+        "imagen": "/proyectoSoot/sources/espresso-png.jpeg",
+        "id": 11
+    },
+    {
+        "nombre": "Latte Machiato",
+        "precio": 3,
+        "cantidad": 1,
+        "imagen": "/proyectoSoot/sources/latteMachiato.jpeg",
+        "id": 12
+    },
+    {
+        "nombre": "Iced Americano",
+        "precio": 3,
+        "cantidad": 1,
+        "imagen": "/proyectoSoot/sources/icedAmericano.webp",
+        "id": 13
+    },
+    {
+        "nombre": "Mocaccino",
+        "precio": 6,
+        "cantidad": 1,
+        "imagen": "/proyectoSoot/sources/mocaccino.webp",
+        "id": 14
+    },
+    {
+        "nombre": "Espresso Affogato",
+        "precio": 4,
+        "cantidad": 1,
+        "imagen": "/proyectoSoot/sources/affogato.jpeg",
+        "id": 15
+    },
+    {
+        "nombre": "Suavignon Blanc",
+        "precio": 7,
+        "cantidad": 1,
+        "imagen": "/proyectoSoot/sources/sauvignon-blanc.jpeg",
+        "id": 16
+    },
+    {
+        "nombre": "Chardonnay",
+        "precio": 12,
+        "cantidad": 1,
+        "imagen": "/proyectoSoot/sources/Chardonnay.jpg",
+        "id": 17
+    },
+    {
+        "nombre": "Cab Sauvignon",
+        "precio": 9,
+        "cantidad": 1,
+        "imagen": "/proyectoSoot/sources/cabernetS.jpeg",
+        "id": 18
+    },
+    {
+        "nombre": "Pinot Grigio",
+        "precio": 11,
+        "cantidad": 1,
+        "imagen": "/proyectoSoot/sources/pinotGrigio.webp",
+        "id": 19
+    },
+    {
+        "nombre": "Merlot",
+        "precio": 15,
+        "cantidad": 1,
+        "imagen": "/proyectoSoot/sources/merlot.jpeg",
+        "id": 20
+    },
+    {
+        "nombre": "Pinot Noir",
+        "precio": 14,
+        "cantidad": 1,
+        "imagen": "/proyectoSoot/sources/pinotNoir.webp",
+        "id": 21
+    },
+    {
+        "nombre": "Pilsener Urquell",
+        "precio": 4,
+        "cantidad": 1,
+        "imagen": "/proyectoSoot/sources/pilsenerU.jpeg",
+        "id": 22
+    },
+    {
+        "nombre": "Paulaner München",
+        "precio": 5,
+        "cantidad": 1,
+        "imagen": "/proyectoSoot/sources/paulaner.jpeg",
+        "id": 23
+    },
+    {
+        "nombre": "Löwenbräu",
+        "precio": 4,
+        "cantidad": 1,
+        "imagen": "/proyectoSoot/sources/löwenbräu.png",
+        "id": 24
+    },
+    {
+        "nombre": "Peroni",
+        "precio": 3,
+        "cantidad": 1,
+        "imagen": "/proyectoSoot/sources/peroni.png",
+        "id": 25
+    },
+    {
+        "nombre": "Quilmes",
+        "precio": 2,
+        "cantidad": 1,
+        "imagen": "/proyectoSoot/sources/quilmes.webp",
+        "id": 26
+    },
+    {
+        "nombre": "Coca cola",
+        "precio": 3,
+        "cantidad": 1,
+        "imagen": "/proyectoSoot/sources/cocaColaOriginal.webp",
+        "id": 27
+    },
+    {
+        "nombre": "Sprite",
+        "precio": 3,
+        "cantidad": 1,
+        "imagen": "/proyectoSoot/sources/sprite.webp",
+        "id": 28
+    },
+    {
+        "nombre": "Fanta",
+        "precio": 3,
+        "cantidad": 1,
+        "imagen": "/proyectoSoot/sources/fanta.png",
+        "id": 29
+    },
+    {
+        "nombre": "Mezzo Mix",
+        "precio": 3,
+        "cantidad": 1,
+        "imagen": "/proyectoSoot/sources/mezzoMix.png",
+        "id": 30
+    },
+    {
+        "nombre": "Acqua Panna",
+        "precio": 2,
+        "cantidad": 1,
+        "imagen": "/proyectoSoot/sources/acquaPanna.png",
+        "id": 31
+    },
+    {
+        "nombre": "San Pellegrino",
+        "precio": 2,
+        "cantidad": 1,
+        "imagen": "/proyectoSoot/sources/sanPellegrino.png",
+        "id": 32
+    }
+
+
+
+
+
+]
+
+
+
+
+
+
+
+

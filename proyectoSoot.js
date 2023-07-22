@@ -214,93 +214,50 @@ class Carrito{
 }
 // Obtener la ruta de acceso y el archivo actual
 const path = window.location.pathname;
-console.log(path); // Imprime la ruta de acceso y el archivo actual en la consola
-// Los productos los ponemos fuera de cualquier función para que sean globales, y así
-// poder acceder a ellos desde cualquier parte de nuestra aplicación
-
-// Clase "molde" para crear los productos
-function Producto(nombre, precio, cantidad, imagen, id){
-    this.nombre = nombre;
-    this.precio = parseInt(precio);
-    this.cantidad = cantidad;
-    this.imagen = imagen;
-    this.id = id;
-}
-
-// Productos
-let gaiaMa = new Producto("Gaia Ma", 12, 1, "sources/gaiaMa.jpg", 0);
-let martini = new Producto("Martini", 16, 1, "sources/martini.jpeg", 1);
-let aperolSpritz = new Producto("Aperol Spritz", 7, 1, "sources/aperol-spritz.jpeg", 3);
-let cubaLibre = new Producto("Cuba Libre", 10, 1, "sources/cuba-libre.jpeg", 4);
-let ginTonic = new Producto("Gin & Tonic", 10, 1, "sources/gin-tonic.jpeg", 5);
-let mojito = new Producto("Mojito", 9, 1, "sources/mojito.jpeg", 6);
-let hugo = new Producto("Hugo", 8, 1, "sources/hugo.jpeg", 7);
-let smokyPaloma = new Producto("Smoky Paloma", 12, 1, "sources/smokyPaloma.jpeg", 8);
-let margarita = new Producto("Margarita", 11, 1, "sources/margarita.png", 9);
+// Imprime la ruta de acceso y el archivo actual en la consola
+console.log(path);
 
 // Elementos
-const botonGaiaMa = document.querySelector("#gaiaMa");
-const botonMartini = document.querySelector("#martini");
 const cajaCheckoutCarrito = document.querySelector("#checkoutCajaCarrito");
+//Btn para modificar el boton del total en el carrito
 const botonCompra = document.querySelector("#botonCompra");
-const botonAperolSpritz = document.querySelector("#aperolSpritz");
-const botonCubaLibre = document.querySelector("#cubaLibre");
-const botonGinTonic = document.querySelector("#ginTonic");
-const botonMojito = document.querySelector("#mojito");
-const btnHugo = document.querySelector("#hugo");
-const btnSmokyPaloma = document.querySelector("#smokyPaloma");
-const btnMargarita = document.querySelector("#margarita");
+//Btn para agregar los extras
 const btnTarjetaCocktails = document.querySelectorAll(".infoDrink__button");
 const contador = document.querySelectorAll(".contador");
+//Btn para identificar a los productos
+const btnCompra = document.querySelectorAll(".btnCompra")
 
 
+//Eventos y Funciones
+async function traerProductos(){
+    const response = await fetch("/proyectoSoot/productos.json")
+    const productos = await response.json()
+    mandarAlCarrito(productos);
+}
 
-// Eventos
-if (botonGaiaMa){ // Le pongo un condicional porque si estoy en otra página ese elemento tal vez no exista
-    botonGaiaMa.addEventListener("click", function(){
-        carrito.agregar(gaiaMa);
-    });
-}
-if (botonMartini){ // Le pongo un condicional porque si estoy en otra página ese elemento tal vez no exista
-    botonMartini.addEventListener("click", function(){
-        carrito.agregar(martini);
-    });
-}
-if (botonAperolSpritz){ // Le pongo un condicional porque si estoy en otra página ese elemento tal vez no exista
-    botonAperolSpritz.addEventListener("click", function(){
-        carrito.agregar(aperolSpritz);
-    });
-}
-if (botonCubaLibre){ // Le pongo un condicional porque si estoy en otra página ese elemento tal vez no exista
-    botonCubaLibre.addEventListener("click", function(){
-        carrito.agregar(cubaLibre);
-    });
-}
-if (botonGinTonic){ // Le pongo un condicional porque si estoy en otra página ese elemento tal vez no exista
-    botonGinTonic.addEventListener("click", function(){
-        carrito.agregar(ginTonic);
-    });
-}
-if (botonMojito){ // Le pongo un condicional porque si estoy en otra página ese elemento tal vez no exista
-    botonMojito.addEventListener("click", function(){
-        carrito.agregar(mojito);
-    });
-}
-if (btnHugo){ // Le pongo un condicional porque si estoy en otra página ese elemento tal vez no exista
-    btnHugo.addEventListener("click", function(){
-        carrito.agregar(hugo);
-    });
-}
-if (btnSmokyPaloma){ // Le pongo un condicional porque si estoy en otra página ese elemento tal vez no exista
-    btnSmokyPaloma.addEventListener("click", function(){
-        carrito.agregar(smokyPaloma);
-    });
-}
-if (btnMargarita){ // Le pongo un condicional porque si estoy en otra página ese elemento tal vez no exista
-    btnMargarita.addEventListener("click", function(){
-        carrito.agregar(margarita);
-    });
-}
+async function mandarAlCarrito(productos){
+    for(let btn of btnCompra){
+        for(let productoAEnviar of productos){
+            if(productoAEnviar.id === parseInt(btn.dataset.id)){
+                btn.addEventListener("click", ()=>{
+                    Swal.fire({
+                        title: 'Done!',
+                        text: `The product ${productoAEnviar.nombre} has been added to the cart`,
+                        icon: 'success',
+                        confirmButtonText: 'Keep going!',
+                        confirmButtonColor : '#0098b3',
+                        showCloseButton: 'true',
+                        showLoaderOnConfirm : 'true'
+                      })
+                    carrito.agregar(productoAEnviar);
+                })
+            }
+        }
+    }
+
+} 
+traerProductos();
+
 if (btnTarjetaCocktails) {
     for (const btn of btnTarjetaCocktails) {
       btn.addEventListener("click", () => {
@@ -312,21 +269,12 @@ if (btnTarjetaCocktails) {
       });
     }
 }
-  
-
-
-
-
-//Para limpiar el local storage =
-//localStorage.clear();
- 
-
 
 
 // Creo el objeto carrito. Es conveniente crearlo a lo último, cosa que ya estén todos
 // los elementos inicializados, variables globales declaradas, y todo listo para usar
 const carrito = new Carrito();
-console.log(...carrito.productos)
+console.log(carrito.productos)
 //Contador de cantidades encima de la imagen carrito
 if(contador){
     //Recorremos el array guarando cada imagen en la variable punto
@@ -355,7 +303,6 @@ if(contador){
 
 //Bugs solucionados:
 /*
-First and Second Version
 - Se arreglo el problema de los indices de los productos, botones y divs que se 
 modificaban al eliminar un producto del carrito. Ahora todo se muestra correctamente
 ya que se agrega un elemento vacio al eliminar el producto para asi conservar los 
@@ -373,12 +320,19 @@ ahora se ejecuta correctamente
 - Se arreglo el problema de la recarga de la pagina del checkout que mostraba productos indefinidos ya que la funcion no borraba
 todos los productos que eran string vacios al recargar la pagina
 
-Cuarta Version (Not on Commit yet)
 - Ruta para el repo /Users/matiasfrascino/Documents/CoderHouse/JavaScript/proyectoSoot
 
 - Se agrego el contador de cantidad de productos por encima de la imagen carrito para hacerlo de manera dinamica
 
 - Se modificaron los estilos para que la aplicacion sea responsive en las distintas pantallas
+
+- Se redujo mucho codigo con la implementacion del fetch, lo cual trae los productos desde un archivo JSON
+
+- Se actualizo el sistema de la seleccion de botones definiendolos por una sola funcion, reduciendo el codigo de manera significativa
+
+- Actualizacion de contenido final
+
+- Se arreglaron los estilos para que sea risponsive en grandes pantallas
 
 
 
