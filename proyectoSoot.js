@@ -55,8 +55,7 @@ class Carrito{
     listar(){
         // Este algoritmo solo se ejecuta si nos encontramos en la página checkout.html
         // Es recomendable usar Live Server (Go live) para correr la aplicación por el tema de los directorios
-        //Se agrego /proyectoSoot/ ya que se ha creado el repositorio
-        if (path == "/proyectoSoot/checkout.html"){
+        if (path == "/checkout.html"){
             console.log("Estoy en el checkout"); 
             this.obtenerDeLocalStorage();
             //Se crea una variable self ya que la variable this trae conflictos dentro del evento unload (Fuente chatGPT)
@@ -230,7 +229,7 @@ const btnCompra = document.querySelectorAll(".btnCompra")
 
 //Eventos y Funciones
 async function traerProductos(){
-    const response = await fetch("/proyectoSoot/productos.json")
+    const response = await fetch("../productos.json")
     const productos = await response.json()
     mandarAlCarrito(productos);
 }
