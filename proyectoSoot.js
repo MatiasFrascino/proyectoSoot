@@ -229,7 +229,7 @@ const btnCompra = document.querySelectorAll(".btnCompra")
 
 //Eventos y Funciones
 async function traerProductos(){
-    const response = await fetch("../productos.json")
+    const response = await fetch("/productos.json")
     const productos = await response.json()
     mandarAlCarrito(productos);
 }
