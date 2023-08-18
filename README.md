@@ -1,5 +1,7 @@
 # SOOT Project
 
+![Bar Simulation App](screenshot.png)
+
 This project was developed as the final assignment for the JavaScript course at Coderhouse. The goal of the project was to create a simulation of a bar application using JavaScript. The application allows users to interact with a virtual bar environment and perform various actions related to ordering drinks, checking the menu, and managing orders.
 
 ## Features
